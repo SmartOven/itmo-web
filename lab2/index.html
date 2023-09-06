@@ -12,7 +12,7 @@
 <header class="site-header">
     <h1 class="site-name">Мой интернет-магазин</h1>
     <nav>
-        <ul>
+        <ul class="site-nav-ul">
             <li class="site-nav-li"><a class="nav-link" href="#">Главная</a></li>
             <li class="site-nav-li"><a class="nav-link" href="#">Каталог</a></li>
             <li class="site-nav-li"><a class="nav-link" href="#">Контакты</a></li>
@@ -28,7 +28,7 @@
                     <strong>IPhone 15 Pro Max - 1299$</strong>
                 </div>
                 <div class="product-img-div">
-                    <img class="product-img" src="iphone_15_pro_max.png" alt="IPhone 15 Pro Max" width="230" height="295">
+                    <img class="product-img" src="iphone_15_pro_max.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -52,7 +52,7 @@
                     <strong>IPhone 15 Pro - 1199$</strong>
                 </div>
                 <div class="product-img-div">
-                    <img class="product-img" src="iphone_15_pro.png" alt="IPhone 15 Pro" width="230" height="295">
+                    <img class="product-img" src="iphone_15_pro.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -76,7 +76,7 @@
                     <strong>IPhone 15 - 999$</strong>
                 </div>
                 <div class="product-img-div">
-                    <img class="product-img" src="iphone_15.png" alt="IPhone 15" width="230" height="295">
+                    <img class="product-img" src="iphone_15.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -105,7 +105,7 @@
                     <strong>IPhone 14 Pro Max - 1099$</strong>
                 </div>
                 <div class="product-img-div">
-                    <img class="product-img" src="iphone_14_pro_max.png" alt="IPhone 14 Pro Max" width="230" height="295">
+                    <img class="product-img" src="iphone_14_pro_max.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -173,13 +173,17 @@
     </section>
 </main>
 <footer class="site-footer">
-    <p>&copy; 2023 Мой интернет-магазин</p>
+    <p class="copyright">&copy; 2023 Мой интернет-магазин</p>
     <pre>
 _._     _,-'""`-._
 (,-.`._,'(       |\`-/|
     `-.-' \ )-`( , o o)
           `-    \`_`"'-
     </pre>
+    <p>
+        Продаем только <span class="text-line-through">паленые</span>
+        <span class="text-upper-underlined">оРиГиНаЛьНыЕ</span> товары!
+    </p>
     <pre>
 const withAuthRedirect = (WrappedComponent: React.ComponentType) => {
     const WithAuthRedirect: React.FC = (props) => {
