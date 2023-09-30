@@ -13,29 +13,29 @@ body {
     word-spacing: 4px;
 }
 
-.section-name {
+.product-group-name {
     margin: 0 0 8px;
 }
 
-.site-nav-li {
+.nav-element {
     display: inline;
 }
 
-.site-nav-ul {
+.nav-list {
     padding-inline-start: 0;
 }
 
-.product-section {
+.product-group {
     margin-bottom: 16px;
 }
 
-.product-img-div {
+.product-img {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.product-name-div {
+.product-name {
     font-size: 20px;
     text-align: center;
 }
@@ -67,7 +67,7 @@ body {
     background-color: #D8E7F3;
 }
 
-.product-article {
+.product {
     background-color: #CDDBB8;
     border: 1px solid black;
     padding: 10px;
@@ -88,7 +88,7 @@ address {
     padding: 20px;
 }
 
-.div-gird {
+.products-line {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 8px;

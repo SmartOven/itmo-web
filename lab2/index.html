@@ -12,23 +12,23 @@
 <header class="site-header">
     <h1 class="site-name">Мой интернет-магазин</h1>
     <nav>
-        <ul class="site-nav-ul">
-            <li class="site-nav-li"><a class="nav-link" href="#">Главная</a></li>
-            <li class="site-nav-li"><a class="nav-link" href="#">Каталог</a></li>
-            <li class="site-nav-li"><a class="nav-link" href="#">Контакты</a></li>
+        <ul class="nav-list">
+            <li class="nav-element"><a class="nav-link" href="#">Главная</a></li>
+            <li class="nav-element"><a class="nav-link" href="#">Каталог</a></li>
+            <li class="nav-element"><a class="nav-link" href="#">Контакты</a></li>
         </ul>
     </nav>
 </header>
 <main class="site-main">
-    <section class="product-section">
-        <h2 class="section-name">Новые поступления</h2>
-        <div class="div-gird">
-            <article class="product-article">
-                <div class="product-name-div">
+    <section class="product-group">
+        <h2 class="product-group-name">Новые поступления</h2>
+        <div class="products-line">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 15 Pro Max - 1299$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_15_pro_max.png" alt="IPhone image" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_15_pro_max.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -47,12 +47,12 @@
                     <li><b>Улучшенная защита от воды и пыли:</b> Высший уровень защиты от внешних воздействий.</li>
                 </ul>
             </article>
-            <article class="product-article">
-                <div class="product-name-div">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 15 Pro - 1199$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_15_pro.png" alt="IPhone image" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_15_pro.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -71,12 +71,12 @@
                     <li><b>Улучшенная защита от воды и пыли:</b> Высший уровень защиты от внешних воздействий.</li>
                 </ul>
             </article>
-            <article class="product-article">
-                <div class="product-name-div">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 15 - 999$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_15.png" alt="IPhone image" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_15.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -97,15 +97,15 @@
             </article>
         </div>
     </section>
-    <section class="product-section">
-        <h2 class="section-name">Скидки и акции</h2>
-        <div class="div-gird">
-            <article class="product-article">
-                <div class="product-name-div">
+    <section class="product-group">
+        <h2 class="product-group-name">Скидки и акции</h2>
+        <div class="products-line">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 14 Pro Max - 1099$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_14_pro_max.png" alt="IPhone image" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_14_pro_max.png" alt="IPhone image" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -123,12 +123,12 @@
                     <li><b>Улучшенная защита от воды и пыли:</b> Высший уровень защиты от внешних воздействий.</li>
                 </ul>
             </article>
-            <article class="product-article">
-                <div class="product-name-div">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 14 Pro - 999$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_14_pro.png" alt="IPhone 14 Pro" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_14_pro.png" alt="IPhone 14 Pro" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -146,12 +146,12 @@
                     <li><b>Улучшенная защита от воды и пыли:</b> Высший уровень защиты от внешних воздействий.</li>
                 </ul>
             </article>
-            <article class="product-article">
-                <div class="product-name-div">
+            <article class="product">
+                <div class="product-name">
                     <strong>IPhone 14 - 799$</strong>
                 </div>
-                <div class="product-img-div">
-                    <img class="product-img" src="iphone_14.png" alt="IPhone 14 - 799$" width="230" height="295">
+                <div class="product-img">
+                    <img src="iphone_14.png" alt="IPhone 14 - 799$" width="230" height="295">
                 </div>
                 <ul>
                     <li><b>Улучшенная камера:</b> Больше мегапикселей,
@@ -206,11 +206,9 @@ const withAuthRedirect = (WrappedComponent: React.ComponentType) => {
         <var>c<sup>2</sup></var>."
     </blockquote>
     <p>Формула успеха: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></p>
-    <aside style="float: right">
-        <address>
-            Адрес: 123 ул. Улица, Город, Страна
-        </address>
-    </aside>
+    <address>
+        Адрес: 123 ул. Улица, Город, Страна
+    </address>
 </footer>
 </body>
 </html>
