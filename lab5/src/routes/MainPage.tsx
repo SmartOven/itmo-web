@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import "../styles/MainPage.css"
+import ThemeSwitcher from "../components/ThemeSwitcher.tsx";
 
 const MainPage: React.FC = () => {
     const [chatsItems, setChatsItems] = useState<string[]>([])
@@ -10,6 +12,7 @@ const MainPage: React.FC = () => {
 
     return (
         <div>
+            <ThemeSwitcher/>
             <div>Main page text</div>
             <p>{chatsItems.length}</p>
         </div>
