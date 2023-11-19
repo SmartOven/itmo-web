@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/price-table.css">
+    <script src="scripts/main.js" defer></script>
+    <title>My online shop</title>
+    <script type="text/javascript">
+        const start = new Date().getTime();
+        window.onload = () => {
+            const end = new Date().getTime();
+            let loadTime = end - start
+            const footer = document.querySelector('footer');
+            const loadingInfo = document.createElement('p');
+            loadingInfo.textContent = 'Page loaded in ' + loadTime + ' milliseconds.';
+            footer.appendChild(loadingInfo);
+        };
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <h1 class="site-name">Мой интернет-магазин</h1>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-element"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-element"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="site-main">
+    <section class="product-group">
+        <h2 class="product-group-name">Новые поступления</h2>
+        <div class="products-line">
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15_pro_max.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">179 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 Pro Max 512Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15_pro.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">159 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 Pro 512Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">99 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 256Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15_pro_max.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">139 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 Pro Max 256Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15_pro.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">119 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 Pro 256Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_15.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">89 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 15 128Gb (White titanium)</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="product-group">
+        <h2 class="product-group-name">Скидки и акции</h2>
+        <div class="products-line">
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14_pro_max.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">139 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 Pro Max 512Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14_pro.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">129 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 Pro 512Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">79 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 256Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14_pro_max.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">119 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 Pro Max 256Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14_pro.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">109 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 Pro 256Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+            <article class="product">
+                <div class="product-img-wrapper">
+                    <div class="product-img">
+                        <img src="assets/iphone_14.png" alt="IPhone image">
+                    </div>
+                </div>
+                <div class="flex-vertical-center">
+                    <div class="product-info">
+                        <div class="product-price">69 000 —</div>
+                        <div class="product-name">Телефон Apple iPhone 14 128Gb (Purple)</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <p class="copyright">&copy; 2023 Мой интернет-магазин</p>
+    <address>
+        Адрес: 123 ул. Улица, Город, Страна
+    </address>
+</footer>
+</body>
+</html>
