@@ -1,0 +1,28 @@
+.nav-link {
+    text-decoration: none;
+    border: 1px solid #F2D263;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.not-active {
+    color: #F2D263;
+    background-color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.not-active:hover {
+    color: #333333;
+    background-color: #F2D263;
+}
+
+.active {
+    color: #333333;
+    background-color: #F2D263;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.active:hover {
+    color: #dabd5a;
+    background-color: #424242;
+}

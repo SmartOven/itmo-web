@@ -1,17 +1,6 @@
-import React from "react";
 import "../styles/MainPage.css"
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
 import MainComponent from "../components/MainComponent.tsx";
+import withHeaderAndFooter from "../components/withHeaderAndFooter.tsx";
 
-const MainPage: React.FC = () => {
-    return (
-        <div>
-            <Header/>
-            <MainComponent/>
-            <Footer/>
-        </div>
-    )
-}
-
+const MainPage = withHeaderAndFooter(MainComponent);
 export default MainPage;

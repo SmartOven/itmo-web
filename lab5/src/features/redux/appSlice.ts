@@ -1,26 +1,22 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {localStorageGetBoolean} from "../constants.ts";
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-// TODO Убрать лишнее
 interface AppState {
-    asideHeaderCompact: boolean;
+    activePageHref: string;
 }
 
 const initialState: AppState = {
-    asideHeaderCompact: localStorageGetBoolean("asideHeaderCompact"),
+    activePageHref: window.location.pathname,
 };
 
 const appSlice = createSlice({
     name: 'app',
     initialState,
     reducers: {
-        switchCompact(state) {
-            const value = !state.asideHeaderCompact
-            state.asideHeaderCompact = value
-            localStorage.setItem("asideHeaderCompact", String(value))
+        setActiveHref(state, action: PayloadAction<string>) {
+            state.activePageHref = action.payload;
         },
     }
 });
 
-export const {switchCompact} = appSlice.actions;
+export const {setActiveHref} = appSlice.actions;
 export default appSlice.reducer;
