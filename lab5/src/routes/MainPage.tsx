@@ -1,20 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "../styles/MainPage.css"
-import ThemeSwitcher from "../components/ThemeSwitcher.tsx";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
+import MainComponent from "../components/MainComponent.tsx";
 
 const MainPage: React.FC = () => {
-    const [chatsItems, setChatsItems] = useState<string[]>([])
-
-    useEffect(() => {
-        console.log("LOL console log");
-        setChatsItems(["1", "2"])
-    }, [])
-
     return (
         <div>
-            <ThemeSwitcher/>
-            <div>Main page text</div>
-            <p>{chatsItems.length}</p>
+            <Header/>
+            <MainComponent/>
+            <Footer/>
         </div>
     )
 }
