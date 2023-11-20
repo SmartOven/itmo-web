@@ -10,7 +10,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15_pro_max.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15_pro_max.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -24,7 +24,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15_pro.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15_pro.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -37,7 +37,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -50,7 +50,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15_pro_max.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15_pro_max.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -64,7 +64,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15_pro.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15_pro.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -77,7 +77,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_15.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_15.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -95,7 +95,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14_pro_max.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14_pro_max.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -108,7 +108,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14_pro.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14_pro.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -121,7 +121,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -134,7 +134,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14_pro_max.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14_pro_max.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -147,7 +147,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14_pro.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14_pro.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
@@ -160,7 +160,7 @@ const MainComponent: React.FC = () => {
                     <article className="product">
                         <div className="product-img-wrapper">
                             <div className="product-img">
-                                <img src="../../public/assets/iphone_14.png" alt="IPhone image"/>
+                                <img src="/assets/iphone_14.png" alt="IPhone image"/>
                             </div>
                         </div>
                         <div className="flex-vertical-center">
