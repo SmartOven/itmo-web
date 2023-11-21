@@ -6,7 +6,8 @@
       "altText": "IPhone image"
     },
     "price": "179 000 —",
-    "fullName": "Телефон Apple iPhone 15 Pro Max 512Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 Pro Max 512Gb (White titanium)",
+    "tag": "new"
   },
   {
     "id": "iphone_15_pro_512gb",
@@ -15,7 +16,8 @@
       "altText": "IPhone image"
     },
     "price": "159 000 —",
-    "fullName": "Телефон Apple iPhone 15 Pro 512Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 Pro 512Gb (White titanium)",
+    "tag": "new"
   },
   {
     "id": "iphone_15_256gb",
@@ -24,7 +26,8 @@
       "altText": "IPhone image"
     },
     "price": "99 000 —",
-    "fullName": "Телефон Apple iPhone 15 256Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 256Gb (White titanium)",
+    "tag": "new"
   },
   {
     "id": "iphone_15_pro_max_256gb",
@@ -33,7 +36,8 @@
       "altText": "IPhone image"
     },
     "price": "139 000 —",
-    "fullName": "Телефон Apple iPhone 15 Pro Max 256Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 Pro Max 256Gb (White titanium)",
+    "tag": "new"
   },
   {
     "id": "iphone_15_pro_256gb",
@@ -42,7 +46,8 @@
       "altText": "IPhone image"
     },
     "price": "119 000 —",
-    "fullName": "Телефон Apple iPhone 15 Pro 256Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 Pro 256Gb (White titanium)",
+    "tag": "new"
   },
   {
     "id": "iphone_15_128gb",
@@ -51,6 +56,7 @@
       "altText": "IPhone image"
     },
     "price": "89 000 —",
-    "fullName": "Телефон Apple iPhone 15 128Gb (White titanium)"
+    "fullName": "Телефон Apple iPhone 15 128Gb (White titanium)",
+    "tag": "new"
   }
 ]

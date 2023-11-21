@@ -5,6 +5,9 @@ import ErrorPage from "./ErrorPage.tsx";
 import MainPage from "./routes/MainPage.tsx";
 import ContactsPage from "./routes/ContactsPage.tsx";
 import TableConstructorPage from "./routes/TableConstructorPage.tsx";
+import ProductPageSkeleton from "./components/ProductPageSkeleton.tsx";
+import ProductComponent from "./components/ProductComponent.tsx";
+import {productDataLoader} from "./features/loaders.ts";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +22,17 @@ const router = createBrowserRouter([
     {
         path: "/table-constructor",
         element: <TableConstructorPage/>,
+    },
+    {
+        path: "/product",
+        element: <ProductPageSkeleton/>,
+        children: [
+            {
+                path: ":productId",
+                element: <ProductComponent/>,
+                loader: productDataLoader,
+            },
+        ],
     },
 ]);
 
