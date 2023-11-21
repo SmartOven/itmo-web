@@ -6,7 +6,7 @@ export async function productDataLoader(productId: any): Promise<ProductData> {
     const response = await executeFetch('/api/product/data/find?id=' + productId, RequestMethod.GET);
     if (!response.ok) {
         console.error("Couldn't fetch product data with productId=" + productId);
-        return {id: "", image: {src: "", altText: ""}, price: "", fullName: "", tag: ""};
+        return {productId: "", image: {src: "", altText: ""}, price: "", fullName: "", tag: ""};
     }
     return await response.json() as ProductData
 }

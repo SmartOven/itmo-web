@@ -1,6 +1,6 @@
 [
   {
-    "id": "iphone_14_pro_max_512gb",
+    "productId": "iphone_14_pro_max_512gb",
     "image": {
       "src": "/assets/iphone_14_pro_max.png",
       "altText": "IPhone image"
@@ -10,7 +10,7 @@
     "tag": "discount"
   },
   {
-    "id": "iphone_14_pro_512gb",
+    "productId": "iphone_14_pro_512gb",
     "image": {
       "src": "/assets/iphone_14_pro.png",
       "altText": "IPhone image"
@@ -20,7 +20,7 @@
     "tag": "discount"
   },
   {
-    "id": "iphone_14_256gb",
+    "productId": "iphone_14_256gb",
     "image": {
       "src": "/assets/iphone_14.png",
       "altText": "IPhone image"
@@ -30,7 +30,7 @@
     "tag": "discount"
   },
   {
-    "id": "iphone_14_pro_max_256gb",
+    "productId": "iphone_14_pro_max_256gb",
     "image": {
       "src": "/assets/iphone_14_pro_max.png",
       "altText": "IPhone image"
@@ -40,7 +40,7 @@
     "tag": "discount"
   },
   {
-    "id": "iphone_14_pro_256gb",
+    "productId": "iphone_14_pro_256gb",
     "image": {
       "src": "/assets/iphone_14_pro.png",
       "altText": "IPhone image"
@@ -50,7 +50,7 @@
     "tag": "discount"
   },
   {
-    "id": "iphone_14_128gb",
+    "productId": "iphone_14_128gb",
     "image": {
       "src": "/assets/iphone_14.png",
       "altText": "IPhone image"

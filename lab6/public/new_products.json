@@ -1,6 +1,6 @@
 [
   {
-    "id": "iphone_15_pro_max_512gb",
+    "productId": "iphone_15_pro_max_512gb",
     "image": {
       "src": "/assets/iphone_15_pro_max.png",
       "altText": "IPhone image"
@@ -10,7 +10,7 @@
     "tag": "new"
   },
   {
-    "id": "iphone_15_pro_512gb",
+    "productId": "iphone_15_pro_512gb",
     "image": {
       "src": "/assets/iphone_15_pro.png",
       "altText": "IPhone image"
@@ -20,7 +20,7 @@
     "tag": "new"
   },
   {
-    "id": "iphone_15_256gb",
+    "productId": "iphone_15_256gb",
     "image": {
       "src": "/assets/iphone_15.png",
       "altText": "IPhone image"
@@ -30,7 +30,7 @@
     "tag": "new"
   },
   {
-    "id": "iphone_15_pro_max_256gb",
+    "productId": "iphone_15_pro_max_256gb",
     "image": {
       "src": "/assets/iphone_15_pro_max.png",
       "altText": "IPhone image"
@@ -40,7 +40,7 @@
     "tag": "new"
   },
   {
-    "id": "iphone_15_pro_256gb",
+    "productId": "iphone_15_pro_256gb",
     "image": {
       "src": "/assets/iphone_15_pro.png",
       "altText": "IPhone image"
@@ -50,7 +50,7 @@
     "tag": "new"
   },
   {
-    "id": "iphone_15_128gb",
+    "productId": "iphone_15_128gb",
     "image": {
       "src": "/assets/iphone_15.png",
       "altText": "IPhone image"

@@ -1,7 +1,7 @@
 export const backendUri = 'http://localhost:8080'
 
 export interface ProductData {
-    id: string;
+    productId: string;
     image: {
         src: string;
         altText: string;

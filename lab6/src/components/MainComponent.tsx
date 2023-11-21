@@ -25,7 +25,7 @@ const MainComponent: React.FC = () => {
     }, []);
 
     const renderProductCard = (product: ProductData, index: number) => {
-        return <a key={"product-" + index} className="product-link" href={"/products/" + product.id}>
+        return <a key={"product-" + index} className="product-link" href={"/products/" + product.productId}>
             <article className="product-card">
                 <div className="product-card-img-wrapper">
                     <div className="product-card-img">
