@@ -1,0 +1,19 @@
+.copyright {
+    vertical-align: middle; /* Вертикальное выравнивание по центру */
+    height: 30px;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #F2D263;
+    padding: 20px;
+}
+
+.text-upper-underlined {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}

@@ -1,0 +1,29 @@
+.site-name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background-color: #333333;
+    color: #F2D263;
+    padding: 8px;
+    text-align: center;
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
