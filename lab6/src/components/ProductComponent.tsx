@@ -7,7 +7,6 @@ const ProductComponent: React.FC = () => {
     const product: Product = useLoaderData() as Product;
     const productData = product.productData;
     const reviews = product.reviews;
-    console.log(product)
     return (
         <div>
             <div className="product">

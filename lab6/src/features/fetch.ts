@@ -21,12 +21,15 @@ export function executeFetch(
 
 export async function fetchGet<Result>(
     uri: string,
-    defaultValue: Result
+    messageOnError: string,
 ): Promise<Result> {
-    const response = await executeFetch(uri, RequestMethod.GET);
-    if (!response.ok) {
-        console.error(`Couldn't fetch from ${uri}`);
-        return defaultValue;
+    try {
+        const response = await executeFetch(uri, RequestMethod.GET);
+        if (!response.ok) {
+            throw Error(messageOnError);
+        }
+        return await response.json() as Result
+    } catch (error) {
+        throw Error(messageOnError);
     }
-    return await response.json() as Result
 }
