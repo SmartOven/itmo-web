@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 const ProductPageSkeleton: React.FC = () => {
     return (
-        <div>
+        <div id="content">
             <Outlet/>
         {/*  Может тут что-то будет  */}
         </div>

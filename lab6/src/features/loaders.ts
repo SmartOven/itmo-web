@@ -1,12 +1,9 @@
-import {executeFetch, RequestMethod} from "./fetch.ts";
-import {ProductData} from "./constants.ts";
+import {Product, ProductData, Review} from "./constants.ts";
+import {fetchGet} from "./fetch.ts";
 
-// TODO Переделать под фулл лоадер продукта целиком (данные + отзывы)
-export async function productDataLoader(productId: any): Promise<ProductData> {
-    const response = await executeFetch('/api/product/data/find?id=' + productId, RequestMethod.GET);
-    if (!response.ok) {
-        console.error("Couldn't fetch product data with productId=" + productId);
-        return {productId: "", image: {src: "", altText: ""}, price: "", fullName: "", tag: ""};
-    }
-    return await response.json() as ProductData
+export async function productPageLoader(param: any): Promise<Product> {
+    const productId = param.params.productId;
+    const productData: ProductData = await fetchGet<ProductData>(`/api/product/data/find?productId=${productId}`, {} as ProductData);
+    const reviews: Review[] = await fetchGet<Review[]>(`/api/product/review/findAllByProductId?productId=${productId}`, []);
+    return {productData: productData, reviews: reviews}
 }

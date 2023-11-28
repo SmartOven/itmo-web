@@ -1,26 +1,27 @@
 import React, {useEffect, useState} from "react";
 import "../styles/MainComponent.css"
-import axios from "axios";
 import {ProductData} from "../features/constants.ts";
+import {executeFetch, RequestMethod} from "../features/fetch.ts";
 
 const MainComponent: React.FC = () => {
     const [newProducts, setNewProducts] = useState<ProductData[]>([]);
     const [discountProducts, setDiscountProducts] = useState<ProductData[]>([]);
 
     useEffect(() => {
-        const fetchData = async (path: string) => {
-            try {
-                return await axios.get<ProductData[]>(path);
-            } catch (error) {
-                console.error('Error loading JSON file ' + path, error);
+        const fetchProductsByTag = async (tag: string): Promise<ProductData[]> => {
+            const response = await executeFetch('/api/product/data/findAllByTag?tag=' + tag, RequestMethod.GET);
+            if (!response.ok) {
+                console.error("Couldn't fetch products with tag=" + tag);
+                return [];
             }
-        };
+            return await response.json() as ProductData[]
+        }
 
-        fetchData('/new_products.json').then(response => {
-            setNewProducts(response === undefined ? [] : response.data)
+        fetchProductsByTag('new').then(response => {
+            setNewProducts(response === undefined ? [] : response)
         });
-        fetchData('/discount_products.json').then(response => {
-            setDiscountProducts(response === undefined ? [] : response.data)
+        fetchProductsByTag('discount').then(response => {
+            setDiscountProducts(response === undefined ? [] : response)
         });
     }, []);
 
@@ -33,7 +34,7 @@ const MainComponent: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex-vertical-center">
-                    <div className="product-info">
+                    <div className="product-card-info">
                         <div className="product-price">{product.price}</div>
                         <div className="product-name">{product.fullName}</div>
                     </div>

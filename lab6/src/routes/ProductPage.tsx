@@ -1,5 +1,5 @@
 import withHeaderAndFooter from "../components/withHeaderAndFooter.tsx";
-import ProductComponent from "../components/ProductComponent.tsx";
+import ProductPageSkeleton from "../components/ProductPageSkeleton.tsx";
 
-const ProductPage = withHeaderAndFooter(ProductComponent);
+const ProductPage = withHeaderAndFooter(ProductPageSkeleton);
 export default ProductPage;

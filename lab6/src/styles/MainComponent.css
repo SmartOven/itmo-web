@@ -8,14 +8,11 @@
 }
 
 .product-card-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 208px;
     height: 262px;
 }
 
-.product-info {
+.product-card-info {
     text-align: start;
 
     .product-price {
@@ -40,6 +37,7 @@
     grid-row-gap: 6px;
     background-color: #CDDBB8;
     border: 1px solid black;
+    border-radius: 8px;
     padding: 10px;
     height: 100%;
     box-sizing: border-box;
