@@ -22,7 +22,7 @@ export function executeFetch(
 export async function fetchGet<Result>(
     uri: string,
     defaultValue: Result
-) {
+): Promise<Result> {
     const response = await executeFetch(uri, RequestMethod.GET);
     if (!response.ok) {
         console.error(`Couldn't fetch from ${uri}`);
