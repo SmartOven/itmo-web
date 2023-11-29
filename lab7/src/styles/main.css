@@ -1,0 +1,42 @@
+body {
+    background-color: #333;
+    margin: 0;
+    line-height: 1.2;
+    font-family: Helvetica, serif;
+}
+
+blockquote {
+    font-style: italic;
+    margin-left: 20px;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Создает тень со смещением по горизонтали 4px, по вертикали 4px и размытием 8px. */
+}
+
+a {
+    color: inherit;
+}
+
+.site-main {
+    padding: 8px;
+    background-color: #D8E7F3;
+}
+
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-horizontal-center {
+    display: flex;
+    justify-content: center;
+}
