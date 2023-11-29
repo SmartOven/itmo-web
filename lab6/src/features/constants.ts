@@ -1,5 +1,10 @@
 export const backendUri = 'http://localhost:8080'
 
+export interface ProductCategories {
+    newProducts: ProductData[]
+    discountProducts: ProductData[]
+}
+
 export interface Product {
     productData: ProductData
     reviews: Review[]

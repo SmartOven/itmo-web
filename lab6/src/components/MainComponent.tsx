@@ -1,29 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "../styles/MainComponent.css"
-import {ProductData} from "../features/constants.ts";
-import {executeFetch, RequestMethod} from "../features/fetch.ts";
+import {ProductCategories, ProductData} from "../features/constants.ts";
+import {useLoaderData} from "react-router-dom";
 
 const MainComponent: React.FC = () => {
-    const [newProducts, setNewProducts] = useState<ProductData[]>([]);
-    const [discountProducts, setDiscountProducts] = useState<ProductData[]>([]);
-
-    useEffect(() => {
-        const fetchProductsByTag = async (tag: string): Promise<ProductData[]> => {
-            const response = await executeFetch('/api/product/data/findAllByTag?tag=' + tag, RequestMethod.GET);
-            if (!response.ok) {
-                console.error("Couldn't fetch products with tag=" + tag);
-                return [];
-            }
-            return await response.json() as ProductData[]
-        }
-
-        fetchProductsByTag('new').then(response => {
-            setNewProducts(response === undefined ? [] : response)
-        });
-        fetchProductsByTag('discount').then(response => {
-            setDiscountProducts(response === undefined ? [] : response)
-        });
-    }, []);
+    const productCategories: ProductCategories = useLoaderData() as ProductCategories;
+    const newProducts: ProductData[] = productCategories.newProducts;
+    const discountProducts: ProductData[] = productCategories.discountProducts;
 
     const renderProductCard = (product: ProductData, index: number) => {
         return <a key={"product-" + index} className="product-link" href={"/products/" + product.productId}>

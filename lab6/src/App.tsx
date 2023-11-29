@@ -1,21 +1,21 @@
 import React from "react";
 import './styles/App.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import ErrorPage from "./ErrorPage.tsx";
+import MainComponentError from "./components/MainComponentError.tsx";
 import MainPage from "./routes/MainPage.tsx";
 import ContactsPage from "./routes/ContactsPage.tsx";
 import TableConstructorPage from "./routes/TableConstructorPage.tsx";
 import ProductComponent from "./components/ProductComponent.tsx";
-import {productPageLoader} from "./features/loaders.ts";
+import {mainPageLoader, productPageLoader} from "./features/loaders.ts";
 import ProductPage from "./routes/ProductPage.tsx";
-import ProductPageError from "./components/ProductPageError.tsx";
+import ProductComponentError from "./components/ProductComponentError.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainPage/>,
-        errorElement: <ErrorPage/>,
-        // FIXME Добавить errorElement
+        loader: mainPageLoader,
+        errorElement: <MainComponentError/>,
     },
     {
         path: "/contacts",
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
                 path: ":productId",
                 element: <ProductComponent/>,
                 loader: productPageLoader,
-                errorElement: <ProductPageError/>
+                errorElement: <ProductComponentError/>
             },
         ],
     },
