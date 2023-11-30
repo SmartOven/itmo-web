@@ -1,12 +1,12 @@
-import React from "react";
+import React, {Suspense} from "react";
 import "../styles/MainComponent.css"
 import {ProductCategories, ProductData} from "../features/constants.ts";
-import {useLoaderData} from "react-router-dom";
+import {Await, useLoaderData} from "react-router-dom";
+import Preloader from "./Preloader.tsx";
+import LoadingError from "./LoadingError.tsx";
 
 const MainComponent: React.FC = () => {
     const productCategories: ProductCategories = useLoaderData() as ProductCategories;
-    const newProducts: ProductData[] = productCategories.newProducts;
-    const discountProducts: ProductData[] = productCategories.discountProducts;
 
     const renderProductCard = (product: ProductData, index: number) => {
         return <a key={"product-" + index} className="product-link" href={"/products/" + product.productId}>
@@ -28,18 +28,40 @@ const MainComponent: React.FC = () => {
 
     return (
         <div>
-            <section className="product-card-group">
-                <h2 className="product-card-group-name">Новые поступления</h2>
-                <div className="products-card-line">
-                    {newProducts.map((product, index) => renderProductCard(product, index))}
-                </div>
-            </section>
-            <section className="product-card-group">
-                <h2 className="product-card-group-name">Скидки и акции</h2>
-                <div className="products-card-line">
-                    {discountProducts.map((product, index) => renderProductCard(product, index))}
-                </div>
-            </section>
+            <Suspense
+                fallback={<Preloader text={"Loading new products..."}/>}
+            >
+                <Await
+                    resolve={productCategories.newProducts}
+                    errorElement={<LoadingError text={"Error loading new products!"}/>}
+                >
+                    {(newProducts: ProductData[]) => (
+                        <section className="product-card-group">
+                            <h2 className="product-card-group-name">Новые поступления</h2>
+                            <div className="products-card-line">
+                                {newProducts.map((product, index) => renderProductCard(product, index))}
+                            </div>
+                        </section>
+                    )}
+                </Await>
+            </Suspense>
+            <Suspense
+                fallback={<Preloader text={"Loading discount products..."}/>}
+            >
+                <Await
+                    resolve={productCategories.discountProducts}
+                    errorElement={<LoadingError text={"Error loading discount products!"}/>}
+                >
+                    {(discountProducts: ProductData[]) => (
+                        <section className="product-card-group">
+                            <h2 className="product-card-group-name">Скидки и акции</h2>
+                            <div className="products-card-line">
+                                {discountProducts.map((product, index) => renderProductCard(product, index))}
+                            </div>
+                        </section>
+                    )}
+                </Await>
+            </Suspense>
         </div>
     )
 }

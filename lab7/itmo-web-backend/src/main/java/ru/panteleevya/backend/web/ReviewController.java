@@ -42,6 +42,9 @@ public class ReviewController extends LaggingController {
         return lagBeforeReturn(response, settingsService);
     }
 
+    /**
+     * Используется на фронте
+     */
     @PostMapping("/create")
     public ResponseEntity<ReviewDocument> create(@RequestBody ReviewDto reviewDto) {
         ReviewDocument reviewDocument = new ReviewDocument(
@@ -52,7 +55,8 @@ public class ReviewController extends LaggingController {
                 reviewDto.text(),
                 reviewDto.rating()
         );
-        return ResponseEntity.ok(repository.save(reviewDocument));
+        ResponseEntity<ReviewDocument> response = ResponseEntity.ok(repository.save(reviewDocument));
+        return lagBeforeReturn(response, settingsService);
     }
 
     @PostMapping("/createAll")
