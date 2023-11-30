@@ -24,6 +24,8 @@ const ProductComponent: React.FC = () => {
                     </div>
                 </div>
             </div>
+            {/*TODO Добавить возможность добавлять отзывы*/}
+            <div>write review form</div>
             <div className="reviews-list">
                 {reviews.length == 0 && <div className="zero-reviews">На этот товар еще нет отзывов</div>}
                 {reviews.map((review, index) => (
