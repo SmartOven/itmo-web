@@ -1,5 +1,14 @@
 import withHeaderAndFooter from "../components/withHeaderAndFooter.tsx";
-import ProductComponent from "../components/ProductComponent.tsx"
+import React from "react";
+import {Outlet} from "react-router-dom";
 
-const ProductPage = withHeaderAndFooter(ProductComponent);
+const ProductComponentWrapper: React.FC = () => {
+    return (
+        <div>
+            <Outlet/>
+        </div>
+    )
+}
+
+const ProductPage = withHeaderAndFooter(ProductComponentWrapper);
 export default ProductPage;

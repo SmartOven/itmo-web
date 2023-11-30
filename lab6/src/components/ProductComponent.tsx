@@ -36,7 +36,6 @@ const ProductComponent: React.FC = () => {
                 ))}
             </div>
         </div>
-
     )
 }
 
