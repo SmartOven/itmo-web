@@ -51,9 +51,7 @@ const ProductComponent: React.FC = () => {
 
     return (
         <div>
-            <Suspense
-                fallback={<Preloader text={"Loading product data..."}/>}
-            >
+            <Suspense fallback={<Preloader text={"Loading product data..."}/>}>
                 <Await
                     resolve={product.productData}
                     errorElement={<LoadingError text={"Error loading product data!"}/>}
@@ -68,9 +66,7 @@ const ProductComponent: React.FC = () => {
                     )}
                 </Await>
             </Suspense>
-            <Suspense
-                fallback={<Preloader text={"Loading reviews..."}/>}
-            >
+            <Suspense fallback={<Preloader text={"Loading reviews..."}/>}>
                 <Await
                     resolve={product.reviews}
                     errorElement={<LoadingError text={"Error loading reviews!"}/>}

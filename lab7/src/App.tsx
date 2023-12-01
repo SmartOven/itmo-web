@@ -5,7 +5,6 @@ import ProductComponent from "./components/product/ProductComponent.tsx";
 import {mainPageLoader, productPageLoader} from "./features/loaders.ts";
 import ProductPage from "./components/product/ProductPage.tsx";
 import ProductComponentError from "./components/product/ProductComponentError.tsx";
-import {createReviewAction} from "./features/actions.ts";
 import RootLayout from "./components/root/RootLayout.tsx";
 import MainComponent from "./components/main/MainComponent.tsx";
 import Contacts from "./components/contacts/Contacts.tsx";
@@ -38,7 +37,6 @@ const router = createBrowserRouter([
                         path: ":productId",
                         element: <ProductComponent/>,
                         loader: productPageLoader,
-                        action: createReviewAction,
                         errorElement: <ProductComponentError/>
                     },
                 ],
