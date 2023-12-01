@@ -4,6 +4,8 @@ import {Product, ProductData, Review} from "../features/constants.ts";
 import "../styles/ProductComponent.css"
 import Preloader from "./Preloader.tsx";
 import LoadingError from "./LoadingError.tsx";
+import ReviewForm, {ReviewDto} from "./ReviewForm.tsx";
+import {executeFetch, RequestMethod} from "../features/fetch.ts";
 
 const ProductComponent: React.FC = () => {
     const product: Product = useLoaderData() as Product;
@@ -40,6 +42,16 @@ const ProductComponent: React.FC = () => {
         </div>
     }
 
+    const onCreateReview = async (reviewDto: ReviewDto) => {
+        const response = await executeFetch("/api/product/review/create", RequestMethod.POST, reviewDto);
+        if (response.ok) {
+            const createdReview = await response.json() as Review
+            console.log(createdReview)
+        } else {
+            console.log(`Error while creating review with reviewDto=${reviewDto}`)
+        }
+    }
+
     return (
         <div>
             <Suspense
@@ -49,7 +61,12 @@ const ProductComponent: React.FC = () => {
                     resolve={product.productData}
                     errorElement={<LoadingError text={"Error loading product data!"}/>}
                 >
-                    {(productData: ProductData) => renderProductData(productData)}
+                    {(productData: ProductData) => (
+                        <div>
+                            {renderProductData(productData)}
+                            <ReviewForm onSubmit={onCreateReview} productId={productData.productId}/>
+                        </div>
+                    )}
                 </Await>
             </Suspense>
             <Suspense

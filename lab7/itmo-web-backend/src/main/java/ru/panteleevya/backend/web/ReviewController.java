@@ -3,16 +3,11 @@ package ru.panteleevya.backend.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.panteleevya.backend.product.data.ProductDataDocument;
-import ru.panteleevya.backend.product.data.ProductDataDto;
 import ru.panteleevya.backend.product.review.ReviewDocument;
 import ru.panteleevya.backend.product.review.ReviewDto;
 import ru.panteleevya.backend.product.review.ReviewRepository;
-import ru.panteleevya.backend.settings.SettingsRepository;
 import ru.panteleevya.backend.settings.SettingsService;
 
-import java.time.LocalDateTime;
-import java.util.Comparator;
 import java.util.List;
 
 @RestController
@@ -36,7 +31,7 @@ public class ReviewController extends LaggingController {
     public ResponseEntity<List<ReviewDocument>> findAllByProductId(@RequestParam String productId) {
         List<ReviewDocument> sortedReviewDocuments = repository.findAllByProductId(productId)
                 .stream()
-                .sorted(Comparator.comparing(ReviewDocument::getTimestamp))
+                .sorted((o1, o2) -> o2.getTimestamp().compareTo(o1.getTimestamp()))
                 .toList();
         ResponseEntity<List<ReviewDocument>> response = ResponseEntity.ok(sortedReviewDocuments);
         return lagBeforeReturn(response, settingsService);
