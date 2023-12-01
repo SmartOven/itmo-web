@@ -1,6 +1,6 @@
 import {useRouteError} from "react-router-dom";
 import React from "react";
-import "../styles/MainComponentError.css"
+import "../../styles/main/MainComponentError.css"
 
 interface Error {
     statusText: string;

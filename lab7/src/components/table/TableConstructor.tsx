@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import TableForm, {TableData} from "./TableForm.tsx";
-import {useAppDispatch, useAppSelector} from "../features/redux/hooks.ts";
-import {setLastSavedTable} from "../features/redux/appSlice.ts";
+import {useAppDispatch, useAppSelector} from "../../features/redux/hooks.ts";
+import {setLastSavedTable} from "../../features/redux/appSlice.ts";
 import Table from "./Table.tsx";
 
 const TableConstructor: React.FC = () => {

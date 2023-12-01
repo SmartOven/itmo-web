@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Header.css"
+import "../../styles/root/Header.css"
 import NavElement from "./NavElement.tsx";
 
 const Header: React.FC = () => {

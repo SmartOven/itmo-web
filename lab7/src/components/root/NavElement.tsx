@@ -1,8 +1,8 @@
 import React from "react";
-import {useAppDispatch, useAppSelector} from "../features/redux/hooks.ts";
-import "../styles/NavElement.css"
+import {useAppDispatch, useAppSelector} from "../../features/redux/hooks.ts";
+import "../../styles/root/NavElement.css"
 import {useNavigate} from "react-router-dom";
-import {setActiveHref} from "../features/redux/appSlice.ts";
+import {setActiveHref} from "../../features/redux/appSlice.ts";
 
 interface NavElementProps {
     href: string;

@@ -1,9 +1,9 @@
 import React, {Suspense} from "react";
-import "../styles/MainComponent.css"
-import {ProductCategories, ProductData} from "../features/constants.ts";
+import "../../styles/main/MainComponent.css"
+import {ProductCategories, ProductData} from "../../features/constants.ts";
 import {Await, useLoaderData} from "react-router-dom";
-import Preloader from "./Preloader.tsx";
-import LoadingError from "./LoadingError.tsx";
+import Preloader from "../Preloader.tsx";
+import LoadingError from "../LoadingError.tsx";
 
 const MainComponent: React.FC = () => {
     const productCategories: ProductCategories = useLoaderData() as ProductCategories;

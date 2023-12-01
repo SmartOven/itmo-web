@@ -1,5 +1,5 @@
 import {executeFetch, RequestMethod} from "./fetch.ts";
-import {ReviewDto} from "../components/ReviewForm.tsx";
+import {ReviewDto} from "../components/product/ReviewForm.tsx";
 
 export const createReviewAction = async (request: any) => {
     const reviewDto = await request.formData() as ReviewDto;

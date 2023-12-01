@@ -1,11 +1,11 @@
 import React, {Suspense} from "react";
 import {Await, useLoaderData} from "react-router-dom";
-import {Product, ProductData, Review} from "../features/constants.ts";
-import "../styles/ProductComponent.css"
-import Preloader from "./Preloader.tsx";
-import LoadingError from "./LoadingError.tsx";
+import {Product, ProductData, Review} from "../../features/constants.ts";
+import "../../styles/product/ProductComponent.css"
+import Preloader from "../Preloader.tsx";
+import LoadingError from "../LoadingError.tsx";
 import ReviewForm, {ReviewDto} from "./ReviewForm.tsx";
-import {executeFetch, RequestMethod} from "../features/fetch.ts";
+import {executeFetch, RequestMethod} from "../../features/fetch.ts";
 
 const ProductComponent: React.FC = () => {
     const product: Product = useLoaderData() as Product;

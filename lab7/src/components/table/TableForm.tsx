@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import "../styles/TableForm.css"
+import "../../styles/table/TableForm.css"
 import Table from "./Table.tsx";
 import TableRow from "./TableRow.tsx";
 

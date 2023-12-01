@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {TableData} from "../../components/TableForm.tsx";
+import {TableData} from "../../components/table/TableForm.tsx";
 
 const loadLastSavedTable = () => {
     const lastSavedTableString = localStorage.getItem('lastSavedTable');
