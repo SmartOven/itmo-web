@@ -9,6 +9,7 @@ import ProductComponent from "./components/ProductComponent.tsx";
 import {mainPageLoader, productPageLoader} from "./features/loaders.ts";
 import ProductPage from "./routes/ProductPage.tsx";
 import ProductComponentError from "./components/ProductComponentError.tsx";
+import {createReviewAction} from "./features/actions.ts";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
                 path: ":productId",
                 element: <ProductComponent/>,
                 loader: productPageLoader,
+                action: createReviewAction,
                 errorElement: <ProductComponentError/>
             },
         ],
