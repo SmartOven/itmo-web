@@ -44,10 +44,7 @@ const ProductComponent: React.FC = () => {
 
     const onCreateReview = async (reviewDto: ReviewDto) => {
         const response = await executeFetch("/api/product/review/create", RequestMethod.POST, reviewDto);
-        if (response.ok) {
-            const createdReview = await response.json() as Review
-            console.log(createdReview)
-        } else {
+        if (!response.ok) {
             console.log(`Error while creating review with reviewDto=${reviewDto}`)
         }
     }
@@ -64,6 +61,8 @@ const ProductComponent: React.FC = () => {
                     {(productData: ProductData) => (
                         <div>
                             {renderProductData(productData)}
+                            {/* TODO Переделать компонент с формой на Form и useActionData() */}
+                            {/*  https://stackoverflow.com/questions/75316710/how-to-update-fetch-with-useloaderdata-using-react-router*/}
                             <ReviewForm onSubmit={onCreateReview} productId={productData.productId}/>
                         </div>
                     )}
