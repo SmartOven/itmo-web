@@ -1,3 +1,7 @@
+.content-margin {
+    margin: 0;
+}
+
 .product-img {
     width: 416px;
     height: 524px;
@@ -25,14 +29,14 @@
 
 .product {
     display: grid;
-    grid-template-columns: 3fr fit-content(100%);
+    grid-template-columns: auto fit-content(100%);
     grid-column-gap: 30px;
     grid-row-gap: 6px;
     background-color: #CDDBB8;
     border: 1px solid black;
     border-radius: 8px;
     padding: 10px;
-    width: fit-content;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
 }
@@ -76,7 +80,9 @@
 }
 
 @media (min-width: 1200px) {
-
+    .content-margin {
+        margin: 0 15%;
+    }
 }
 
 @media (max-width: 825px) {

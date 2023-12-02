@@ -1,6 +1,6 @@
 import React from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import MainComponentError from "./components/main/MainComponentError.tsx";
+import DefaultErrorPage from "./components/main/MainComponentError.tsx";
 import ProductComponent from "./components/product/ProductComponent.tsx";
 import {mainPageLoader, productPageLoader} from "./features/loaders.ts";
 import ProductPage from "./components/product/ProductPage.tsx";
@@ -9,6 +9,7 @@ import RootLayout from "./components/root/RootLayout.tsx";
 import MainComponent from "./components/main/MainComponent.tsx";
 import Contacts from "./components/contacts/Contacts.tsx";
 import TableConstructor from "./components/table/TableConstructor.tsx";
+import TestComponent from "./components/TestComponent.tsx";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <MainComponent/>,
                 loader: mainPageLoader,
-                errorElement: <MainComponentError/>,
+                errorElement: <DefaultErrorPage/>,
             },
             {
                 path: "/contacts",
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
                     },
                 ],
             },
+            {
+                path: "/test",
+                element: <TestComponent/>,
+                errorElement: <DefaultErrorPage/>
+            }
         ]
     },
 ]);
