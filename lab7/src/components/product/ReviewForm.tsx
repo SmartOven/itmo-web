@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import "../../styles/product/ReviewForm.css"
-import {useFormik} from "formik";
+import {FormikState, useFormik} from "formik";
 
 export interface ReviewDto {
     productId: string
@@ -32,48 +32,54 @@ const ReviewForm: React.FC<ReviewFormProps> = ({onSubmit, productId}) => {
     }
     const formik = useFormik({
         initialValues: initialReviewDto,
-        onSubmit: onCreateReview,
+        onSubmit: async (values, {resetForm}) => {
+            await onCreateReview(values)
+            resetForm(initialReviewDto as Partial<FormikState<ReviewDto>>)
+        },
     });
     return (
         <div className="review-form">
+            <div className="review-form-header">Напишите отзыв на товар</div>
             <form className="register-form" onSubmit={formik.handleSubmit}>
-                <div className="input-with-label">
-                    <label htmlFor="username-input" className="review-field-label">
-                        Представьтесь:
-                    </label>
-                    <input
-                        id="username"
-                        name="username"
-                        type="text"
-                        placeholder="Имя или никнейм"
-                        value={formik.values.username}
-                        onChange={formik.handleChange}
-                    />
-                </div>
-                <div className="input-with-label">
-                    <div className="flex-vertical-center review-field-label">
-                        Оцените товар:
+                <div className="review-form-lines">
+                    <div className="input-with-label">
+                        <label htmlFor="username-input" className="review-field-label">
+                            Представьтесь:
+                        </label>
+                        <input
+                            className="username-input"
+                            id="username"
+                            name="username"
+                            type="text"
+                            placeholder="Имя или никнейм"
+                            value={formik.values.username}
+                            onChange={formik.handleChange}
+                        />
                     </div>
-                    <div className="stars-line">
-                        {[1, 2, 3, 4, 5].map((value) => (
-                            <Fragment key={value}>
-                                <input
-                                    className="star-radio-button"
-                                    type="radio"
-                                    id={`star${value}`}
-                                    name="rating"
-                                    value={value.toString()}
-                                    checked={formik.values.rating === value}
-                                    onChange={formik.handleChange}
-                                />
-                                <label htmlFor={`star${value}`} className="star">
-                                    {value <= formik.values.rating ? "⭐" : "☆"}
-                                </label>
-                            </Fragment>
-                        ))}
+                    <div className="input-with-label">
+                        <div className="flex-vertical-center review-field-label">
+                            Оцените товар:
+                        </div>
+                        <div className="stars-line">
+                            {[1, 2, 3, 4, 5].map((value) => (
+                                <Fragment key={value}>
+                                    <input
+                                        className="star-radio-button"
+                                        type="radio"
+                                        id={`star${value}`}
+                                        name="rating"
+                                        value={value.toString()}
+                                        checked={formik.values.rating === value}
+                                        onChange={formik.handleChange}
+                                    />
+                                    <label htmlFor={`star${value}`} className="star">
+                                        {value <= formik.values.rating ? "⭐" : "☆"}
+                                    </label>
+                                </Fragment>
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div>
+                    <div>
                         <textarea
                             className="review-text"
                             id="text"
@@ -82,8 +88,9 @@ const ReviewForm: React.FC<ReviewFormProps> = ({onSubmit, productId}) => {
                             value={formik.values.text}
                             onChange={formik.handleChange}
                         />
+                    </div>
                 </div>
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Оставить отзыв"/>
             </form>
         </div>
     )
