@@ -30,16 +30,23 @@ const ReviewForm: React.FC<ReviewFormProps> = ({onSubmit, productId}) => {
             .split('.')[0]
         onSubmit(reviewDto)
     }
+    // Используем хук useFormik, передаем туда параметры initialValues: T и onSubmit: (T t) => void
     const formik = useFormik({
         initialValues: initialReviewDto,
         onSubmit: async (values, {resetForm}) => {
             await onCreateReview(values)
+            // Используем resetForm(initialData: Partial<FormikState<T>>)
+            // чтобы обновить данные в форме до изначальных при нажатии submit-кнопки
             resetForm(initialReviewDto as Partial<FormikState<ReviewDto>>)
         },
     });
     return (
         <div className="review-form">
             <div className="review-form-header">Напишите отзыв на товар</div>
+            {/* formik сделает за нас все манипуляции по обновлению данных в форме */}
+            {/* formik.values содержит все значения, которые в данный момент переданы в форму */}
+            {/* formik.handleChange будет сохранять переданное в input/textarea значение по ключу указанному в name */}
+            {/* Дока - https://formik.org/docs/overview */}
             <form className="register-form" onSubmit={formik.handleSubmit}>
                 <div className="review-form-lines">
                     <div className="input-with-label">
