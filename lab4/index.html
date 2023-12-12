@@ -9,19 +9,8 @@
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/price-table.css">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js"></script>
     <title>My online shop</title>
-    <script type="text/javascript">
-        const start = new Date().getTime();
-        window.onload = () => {
-            const end = new Date().getTime();
-            let loadTime = end - start
-            const footer = document.querySelector('footer');
-            const loadingInfo = document.createElement('p');
-            loadingInfo.textContent = 'Page loaded in ' + loadTime + ' milliseconds.';
-            footer.appendChild(loadingInfo);
-        };
-    </script>
 </head>
 <body>
 <header class="site-header">
